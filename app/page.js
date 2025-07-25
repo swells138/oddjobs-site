@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans bg-background text-foreground min-h-screen flex flex-col">
+    <div className="font-sans min-h-screen flex flex-col">
       {/* Navbar */}
       <nav className="bg-[#1f1f1f] text-white px-6 py-4 flex justify-between items-center">
         <span className="font-bold text-xl">Odd Jobs</span>
