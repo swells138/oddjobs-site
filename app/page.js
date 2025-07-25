@@ -2,101 +2,106 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="font-sans bg-background text-foreground min-h-screen flex flex-col">
+      {/* Navbar */}
+      <nav className="bg-[#1f1f1f] text-white px-6 py-4 flex justify-between items-center">
+        <span className="font-bold text-xl">Odd Jobs</span>
+        <ul className="flex gap-4 text-sm">
+          <li><a href="#about" className="hover:text-purple-400">About</a></li>
+          <li><a href="#services" className="hover:text-purple-400">Services</a></li>
+          <li><a href="#work" className="hover:text-purple-400">Work</a></li>
+          <li><a href="#reviews" className="hover:text-purple-400">Reviews</a></li>
+          <li><a href="#contact" className="hover:text-purple-400">Contact</a></li>
+        </ul>
+      </nav>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="flex-1 px-6 py-10 sm:px-10 max-w-5xl mx-auto space-y-20">
+        {/* About Section */}
+        <section id="about" className="space-y-4">
+          <h2 className="text-3xl font-semibold text-purple-400">About Me</h2>
+          <p>
+            I'm Alex, a reliable jack-of-all-trades who can tackle a variety of
+            odd jobs around your home or business. Whether you need furniture
+            assembled, shelves installed or a lawn tidied up, I'm here to help.
+          </p>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="space-y-4">
+          <h2 className="text-3xl font-semibold text-purple-400">Services & Prices</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-[#2a2a2a] p-4 rounded">
+              <h3 className="font-semibold mb-2">Furniture Assembly</h3>
+              <p className="text-sm mb-2">Assembly of flat-pack furniture.</p>
+              <span className="font-bold text-purple-300">$40 per hour</span>
+            </div>
+            <div className="bg-[#2a2a2a] p-4 rounded">
+              <h3 className="font-semibold mb-2">Yard Work</h3>
+              <p className="text-sm mb-2">Mowing lawns and basic gardening.</p>
+              <span className="font-bold text-purple-300">$35 per hour</span>
+            </div>
+            <div className="bg-[#2a2a2a] p-4 rounded">
+              <h3 className="font-semibold mb-2">Minor Repairs</h3>
+              <p className="text-sm mb-2">Fixing squeaky doors or loose hinges.</p>
+              <span className="font-bold text-purple-300">$45 per hour</span>
+            </div>
+            <div className="bg-[#2a2a2a] p-4 rounded">
+              <h3 className="font-semibold mb-2">Custom Requests</h3>
+              <p className="text-sm mb-2">Have something else in mind? Let me know!</p>
+              <span className="font-bold text-purple-300">Contact for quote</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Work Examples Section */}
+        <section id="work" className="space-y-4">
+          <h2 className="text-3xl font-semibold text-purple-400">Example Work</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <Image src="/window.svg" width={150} height={150} alt="Example work" className="bg-white p-4 rounded" />
+            <Image src="/file.svg" width={150} height={150} alt="Example work" className="bg-white p-4 rounded" />
+            <Image src="/globe.svg" width={150} height={150} alt="Example work" className="bg-white p-4 rounded" />
+          </div>
+        </section>
+
+        {/* Reviews Section */}
+        <section id="reviews" className="space-y-4">
+          <h2 className="text-3xl font-semibold text-purple-400">Reviews</h2>
+          <div className="space-y-4">
+            <div className="bg-[#2a2a2a] p-4 rounded">
+              <p className="italic">"Alex assembled my new desk quickly and did a great job!"</p>
+              <p className="text-yellow-400">★★★★★</p>
+            </div>
+            <div className="bg-[#2a2a2a] p-4 rounded">
+              <p className="italic">"Friendly and professional. My yard looks fantastic."</p>
+              <p className="text-yellow-400">★★★★☆</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="space-y-4">
+          <h2 className="text-3xl font-semibold text-purple-400">Contact Me</h2>
+          <p>You can reach me at <a href="mailto:alex@example.com" className="text-purple-300 underline">alex@example.com</a> or send a message using the form below.</p>
+          <form className="space-y-4">
+            <div>
+              <label className="block text-sm mb-1" htmlFor="name">Name</label>
+              <input id="name" type="text" className="w-full p-2 rounded bg-[#1f1f1f] border border-[#444]" />
+            </div>
+            <div>
+              <label className="block text-sm mb-1" htmlFor="email">Email</label>
+              <input id="email" type="email" className="w-full p-2 rounded bg-[#1f1f1f] border border-[#444]" />
+            </div>
+            <div>
+              <label className="block text-sm mb-1" htmlFor="message">Message</label>
+              <textarea id="message" className="w-full p-2 rounded bg-[#1f1f1f] border border-[#444]" rows="4"></textarea>
+            </div>
+            <button type="submit" className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">Send</button>
+          </form>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="text-center py-4 text-sm bg-[#1f1f1f] text-gray-400">
+        &copy; {new Date().getFullYear()} Odd Jobs
       </footer>
     </div>
   );
