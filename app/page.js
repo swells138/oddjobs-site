@@ -20,9 +20,9 @@ export default function Home() {
         <section id="about" className="space-y-4">
           <h2 className="text-3xl font-semibold text-purple-400">About Me</h2>
           <p>
-            I'm Alex, a reliable jack-of-all-trades who can tackle a variety of
+            I&apos;m Alex, a reliable jack-of-all-trades who can tackle a variety of
             odd jobs around your home or business. Whether you need furniture
-            assembled, shelves installed or a lawn tidied up, I'm here to help.
+            assembled, shelves installed or a lawn tidied up, I&apos;m here to help.
           </p>
         </section>
 
@@ -68,11 +68,11 @@ export default function Home() {
           <h2 className="text-3xl font-semibold text-purple-400">Reviews</h2>
           <div className="space-y-4">
             <div className="bg-[#2a2a2a] p-4 rounded">
-              <p className="italic">"Alex assembled my new desk quickly and did a great job!"</p>
+              <p className="italic">&quot;Alex assembled my new desk quickly and did a great job!&quot;</p>
               <p className="text-yellow-400">★★★★★</p>
             </div>
             <div className="bg-[#2a2a2a] p-4 rounded">
-              <p className="italic">"Friendly and professional. My yard looks fantastic."</p>
+              <p className="italic">&quot;Friendly and professional. My yard looks fantastic.&quot;</p>
               <p className="text-yellow-400">★★★★☆</p>
             </div>
           </div>
